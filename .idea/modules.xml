@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java102.iml" filepath="$PROJECT_DIR$/Java102.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" filepath="$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" />
+    </modules>
+  </component>
+</project>
