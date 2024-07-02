@@ -1,5 +1,5 @@
 public class Hunter extends GameCharacters{
     public Hunter() {
-        super("Hunter",7, 18, 21);
+        super(3,"Hunter",7, 18, 21);
     }
 }

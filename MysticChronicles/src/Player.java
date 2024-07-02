@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.Scanner;
 
 public class Player {
@@ -6,11 +5,12 @@ public class Player {
     private int damage;
     private int health;
     private  int money;
-   // private  String charType;
+    private Inventory inventory;
     private Scanner input = new Scanner(System.in);
 
     public Player(String name){
         this.name =name;
+        this.inventory = new Inventory();
     }
 
     public void selectChar(){
@@ -27,7 +27,6 @@ public class Player {
         System.out.println("Please select a character. Enter 1 for Assassin,2 for Battle Priest,3 for Hunter, 4 for Knight 5 for Samurai.");
 
         int select = input.nextInt();
-
 
         switch(select){
             case 1:
@@ -50,18 +49,28 @@ public class Player {
                 return;
         }
 
-        System.out.println("Choosen character: "+ this.getName()+
+        System.out.println("Chosen character: "+ this.getName()+
                 "\t Health: "+ this.getHealth()+
                 "\t Damage: "+this.getDamage()+
                 "\t Money: "+ this.getMoney());
 
     }
+
     public  void initPlayer(GameCharacters gameCharacters){
         this.setName(gameCharacters.getName());
         this.setDamage((gameCharacters.getDamage()));
         this.setHealth(gameCharacters.getHealth());
         this.setMoney(gameCharacters.getMoney());
     }
+
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
     public String getName() {
         return name;
     }
@@ -93,14 +102,5 @@ public class Player {
     public void setMoney(int money) {
         this.money = money;
     }
-//
-//    public String getCharType() {
-//        return charType;
-//    }
-//
-//    public void setCharType(String charType) {
-//        this.charType = charType;
-//    }
-
 
 }
