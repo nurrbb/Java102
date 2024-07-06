@@ -83,6 +83,9 @@ public class Player {
         this.name = name;
     }
 
+    public int getTotalDamage(){
+        return damage+this.getInventory().getWeapons().getDamage();
+    }
     public int getDamage() {
         return damage;
     }

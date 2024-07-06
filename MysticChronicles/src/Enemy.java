@@ -3,12 +3,14 @@ public class Enemy {
     private String name;
     private  int damage;
     private  int health;
+    private int loot;
 
-    public Enemy(int id, String name, int damage, int health) {
+    public Enemy(int id, String name, int damage, int health, int loot) {
         this.id = id;
         this.name = name;
         this.damage = damage;
         this.health = health;
+        this.loot = loot;
     }
 
     public String getName() {
@@ -41,5 +43,13 @@ public class Enemy {
 
     public void setHealth(int health) {
         this.health = health;
+    }
+
+    public int getLoot() {
+        return loot;
+    }
+
+    public void setLoot(int loot) {
+        this.loot = loot;
     }
 }
