@@ -13,10 +13,10 @@ public class Weapons {
 
     public static Weapons[] weapon(){
         Weapons[] weaponsList = new Weapons[6];
-         weaponsList[0] = new Weapons(1,"Iron Edge",3,43);
-        weaponsList[1] = new Weapons(2,"Dark Sword",4,43);
+         weaponsList[0] = new Weapons(1,"Iron Edge",3,5);
+        weaponsList[1] = new Weapons(2,"Dark Sword",4,6);
         weaponsList[2] = new Weapons(3,"Dwarf Dagger",4,43);
-        weaponsList[3] = new Weapons(4,"Phantom Sniper",3,43);
+        weaponsList[3] = new Weapons(4,"Phantom Sniper",3,5);
         weaponsList[4] = new Weapons(5,"Twin Arrow",4,43);
         weaponsList[5] = new Weapons(6,"Twilight Bow",4,43);
         return weaponsList;

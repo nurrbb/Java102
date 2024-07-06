@@ -13,8 +13,9 @@ public class Game {
         player1.selectChar();
 
         Location location = null;
+
         while (true){
-            System.out.println("Locations: \n  1- House \n 2-Store \n 0-Exit Please select a location:");
+            System.out.println("Locations: \n  1- House \n 2-Store \n 3-Cave \n 4-Forest \n 5-River \n 6-Mine \n7-Desert \n 0-Exit Please select a location:");
             int select =input.nextInt();
             switch (select){
                 case 0:
@@ -25,6 +26,21 @@ public class Game {
                     break;
                 case 2:
                     location = new Store(player1);
+                    break;
+                case 3:
+                    location =new Cave(player1);
+                    break;
+                case 4:
+                    location = new Forest(player1);
+                    break;
+                case 5:
+                    location = new River(player1);
+                    break;
+                case 6 :
+                    location = new Mine(player1);
+                    break;
+                case 7:
+                    location = new Desert(player1);
                     break;
                 default:
                     location= new House(player1);

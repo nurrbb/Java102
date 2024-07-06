@@ -18,11 +18,9 @@ public class Store extends SafeLocations {
                 case 1:
                     printWeapons();
                     buyWeapon();
-                    break;
                 case 2:
                     printArmor();
                     buyArmor();
-                    break;
                 case 3:
                     System.out.println("See you later my dear friend.");
                     showMenu = false;
@@ -49,21 +47,19 @@ public class Store extends SafeLocations {
             System.out.println("Invalid select. Please try again.");
             chooseWeaponID = input.nextInt();
         }
-        if(chooseWeaponID !=0) {
-            Weapons chosenWeapon = Weapons.getWeaponByID(chooseWeaponID);
-            if (chosenWeapon != null) {
-                if (chosenWeapon.getPrice() > this.getPlayer().getMoney()) {
-                    System.out.println("Insufficient Funds: You do not have enough money to purchase this item." + this.getPlayer().getMoney());
-                } else {
-                    System.out.println("Purchase Successful: You have successfully bought the" + chosenWeapon.getName());
-                    int totalBalance = this.getPlayer().getMoney() - chosenWeapon.getPrice();
-                    this.getPlayer().setMoney(totalBalance);
-                    System.out.println("Total Balance :" + this.getPlayer().getMoney());
-                    System.out.println("Previous weapon" + this.getPlayer().getInventory().getWeapons().getName());
-                    System.out.println("Equipped Weapon: ");
-                    this.getPlayer().getInventory().setWeapons(chosenWeapon);
-                }
 
+        Weapons chosenWeapon = Weapons.getWeaponByID(chooseWeaponID);
+        if (chosenWeapon != null) {
+            if (chosenWeapon.getPrice() > this.getPlayer().getMoney()) {
+                System.out.println("Insufficient Funds: You do not have enough money to purchase this item." + this.getPlayer().getMoney());
+            }
+            else {
+                System.out.println("Purchase Successful: You have successfully bought : " + chosenWeapon.getName());
+                int totalBalance = this.getPlayer().getMoney() - chosenWeapon.getPrice();
+                this.getPlayer().setMoney(totalBalance);
+                System.out.println("Total Balance :" + this.getPlayer().getMoney());
+                System.out.println("Equipped Weapon: " + chosenWeapon.getName());
+                this.getPlayer().getInventory().setWeapons(chosenWeapon);
             }
         }
     }
@@ -77,22 +73,20 @@ public class Store extends SafeLocations {
             chooseArmorID = input.nextInt();
         }
         Armor chosenArmor = Armor.getArmorByID(chooseArmorID);
-      if(chooseArmorID != 0){
-          if (chosenArmor != null) {
-              if (chosenArmor.getPrice() > this.getPlayer().getMoney()) {
-                  System.out.println("Insufficient Funds: You do not have enough money to purchase this item." + this.getPlayer().getMoney());
-              } else {
-                  System.out.println("Purchase Successful: You have successfully bought the" + chosenArmor.getName());
-                  int totalBalance = this.getPlayer().getMoney() - chosenArmor.getPrice();
-                  this.getPlayer().setMoney(totalBalance);
-                  System.out.println("Total Balance :" + this.getPlayer().getMoney());
-                  System.out.println("Previous weapon" + this.getPlayer().getInventory().getArmor().getName());
-                  System.out.println("Equipped Weapon: ");
-                  this.getPlayer().getInventory().setArmor(chosenArmor);
-              }
 
-          }
-      }
+        if (chosenArmor != null) {
+            if (chosenArmor.getPrice() > this.getPlayer().getMoney()) {
+                System.out.println("Insufficient Funds: You do not have enough money to purchase this item." + this.getPlayer().getMoney());
+            } else {
+                System.out.println("Purchase Successful: You have successfully bought the" + chosenArmor.getName());
+                int totalBalance = this.getPlayer().getMoney() - chosenArmor.getPrice();
+                this.getPlayer().setMoney(totalBalance);
+                System.out.println("Total Balance : " + this.getPlayer().getMoney());
+                System.out.println("Previous Armor: " + this.getPlayer().getInventory().getArmor().getName());
+                System.out.println("Equipped Armor: " + chosenArmor.getName());
+                this.getPlayer().getInventory().setArmor(chosenArmor);
+            }
+        }
     }
 
     public void printArmor() {
