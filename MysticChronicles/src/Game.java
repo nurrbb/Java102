@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Game {
     public Scanner input = new Scanner(System.in);
     public void start(){
-        System.out.println("welocme messega");
-        System.out.println("please nickname: ");
+        System.out.println("*** MYSTIC CHRONICLES  ***");
+        System.out.println("please enter your name : ");
         String playerName = input.nextLine();
         Player player1 = new Player(playerName);
-        System.out.println(player1.getName() + "welcome messege");
+        System.out.println("Welcome " + player1.getName() +"! The realms are in need of your courage and skill.\n Begin your epic adventure and become a legend. " );
         player1.selectChar();
 
         Location location = null;
