@@ -15,14 +15,18 @@ public class Player {
 
     public void selectChar(){
         GameCharacters[] characterList ={new Assassin(), new BattlePriest(),new Hunter(),new Knight(),new Samurai()};
-        System.out.println("*************************");
+        System.out.println(" CHARACTERS ");
+        System.out.println();
         for (GameCharacters gameCharacters:characterList){
             System.out.println("Character: "+ gameCharacters.getName()+
+                    "\t Armor: "+ this.getInventory().getArmor().getName()+
+                    "\t Weapon: "+ this.getInventory().getWeapons().getName()+
                     "\t Health: "+ gameCharacters.getHealth()+
                     "\t Damage: "+gameCharacters.getDamage()+
+                    "\t Defence: "+ this.getInventory().getArmor().getDefense()+
                     "\t Money: "+ gameCharacters.getMoney());
         }
-        System.out.println("*************************");
+        System.out.println();
 
         System.out.println("Please select a character. Enter 1 for Assassin,2 for Battle Priest,3 for Hunter, 4 for Knight 5 for Samurai.");
 
