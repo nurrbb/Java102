@@ -1,11 +1,10 @@
 public class Inventory {
-
     private Weapons weapons;
     private Armor armor;
 
-    public Inventory(){
-        this.weapons = new Weapons(-1,"Fist",1,0);
-        this.armor = new Armor(-1,"Worn Vest",1,0);
+    public Inventory() {
+        this.weapons = new Weapons(-1, "Fist", 1, 0);
+        this.armor = new Armor(-1, "Worn Vest", 1, 0);
     }
 
     public Weapons getWeapons() {
@@ -23,6 +22,7 @@ public class Inventory {
     public void setArmor(Armor armor) {
         this.armor = armor;
     }
+
     public void addWeapon(Weapons weapon) {
         this.weapons = weapon;
     }
