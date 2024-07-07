@@ -3,14 +3,23 @@ public class Enemy {
     private String name;
     private  int damage;
     private  int health;
-    private int loot;
+    private int defHealth;
 
-    public Enemy(int id, String name, int damage, int health, int loot) {
+    public Enemy(int id, String name, int damage, int health) {
         this.id = id;
         this.name = name;
         this.damage = damage;
         this.health = health;
-        this.loot = loot;
+        this.defHealth = health;
+
+    }
+
+    public int getDefHealth() {
+        return defHealth;
+    }
+
+    public void setDefHealth(int defHealth) {
+        this.defHealth = defHealth;
     }
 
     public String getName() {
@@ -42,14 +51,10 @@ public class Enemy {
     }
 
     public void setHealth(int health) {
+        if(health<0){
+            health=0;
+        }
         this.health = health;
     }
 
-    public int getLoot() {
-        return loot;
-    }
-
-    public void setLoot(int loot) {
-        this.loot = loot;
-    }
 }

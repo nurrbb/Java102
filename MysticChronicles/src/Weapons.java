@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Weapons {
     private int id;
     private String name;
@@ -22,9 +24,21 @@ public class Weapons {
         return weaponsList;
     }
 
+
+
     public static Weapons getWeaponByID(int id){
         for (Weapons weapon : Weapons.weapon()){
             if(weapon.getId() == id){
+                return weapon;
+            }
+        }
+        return null;
+    }
+    public static Weapons getRandomWeapon(String type) {
+        Random random = new Random();
+        Weapons[] weaponsList = Weapons.weapon();
+        for (Weapons weapon : weaponsList) {
+            if (weapon.getName().contains(type)) {
                 return weapon;
             }
         }

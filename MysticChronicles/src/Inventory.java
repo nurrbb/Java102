@@ -23,4 +23,11 @@ public class Inventory {
     public void setArmor(Armor armor) {
         this.armor = armor;
     }
+    public void addWeapon(Weapons weapon) {
+        this.weapons = weapon;
+    }
+
+    public void addArmor(Armor armor) {
+        this.armor = armor;
+    }
 }

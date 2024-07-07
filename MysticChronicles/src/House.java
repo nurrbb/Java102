@@ -5,6 +5,7 @@ public class House extends SafeLocations{
     @Override
     public boolean LocationStatus() {
         System.out.println("Youre at safehoouse");
+        this.getPlayer().setHealth(this.getPlayer().getDefHealth());
         return true;
     }
 

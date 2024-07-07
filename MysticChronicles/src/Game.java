@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Game {
     public Scanner input = new Scanner(System.in);
     public void start(){
+        System.out.println("**************************");
         System.out.println("*** MYSTIC CHRONICLES  ***");
         System.out.println("please enter your name : ");
         String playerName = input.nextLine();
@@ -15,7 +16,8 @@ public class Game {
         Location location = null;
 
         while (true){
-            System.out.println("Locations: \n  1- House \n 2-Store \n 3-Cave \n 4-Forest \n 5-River \n 6-Mine \n7-Desert \n 0-Exit Please select a location:");
+            System.out.println();
+            System.out.println("Locations: \n 1- House \n 2-Store \n 3-Cave \n 4-Forest \n 5-River \n 6-Mine \n 7-Desert \n 0-Exit \n Please select a location:");
             int select =input.nextInt();
             switch (select){
                 case 0:
