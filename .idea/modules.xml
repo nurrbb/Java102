@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bookcase/Bookcase.iml" filepath="$PROJECT_DIR$/Bookcase/Bookcase.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java102.iml" filepath="$PROJECT_DIR$/Java102.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyList/MyList.iml" filepath="$PROJECT_DIR$/MyList/MyList.iml" />
       <module fileurl="file://$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" filepath="$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" />
