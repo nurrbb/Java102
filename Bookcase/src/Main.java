@@ -4,11 +4,11 @@ public class Main {
     public static void main(String[] args) {
 
         Set<Book> booksByTitle = new TreeSet<>();
-        booksByTitle.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", 180, new GregorianCalendar(1925, Calendar.APRIL, 10).getTime()));
-        booksByTitle.add(new Book("To Kill a Mockingbird", "Harper Lee", 281, new GregorianCalendar(1960, Calendar.JULY, 11).getTime()));
-        booksByTitle.add(new Book("1984", "Harper Lee", 328, new GregorianCalendar(1949, Calendar.JUNE, 8).getTime()));
-        booksByTitle.add(new Book("Moby Dick", "Herman Melville", 585, new GregorianCalendar(1851, Calendar.OCTOBER, 18).getTime()));
-        booksByTitle.add(new Book("Pride and Prejudice", "Jane Austen", 279, new GregorianCalendar(1813, Calendar.JANUARY, 28).getTime()));
+        booksByTitle.add(new Book("The Catcher in the Rye", "J.D. Salinger", 277, new GregorianCalendar(1951, Calendar.JULY, 16).getTime()));
+        booksByTitle.add(new Book("Brave New World", "Aldous Huxley", 311, new GregorianCalendar(1932, Calendar.AUGUST, 30).getTime()));
+        booksByTitle.add(new Book("Fahrenheit 451", "Ray Bradbury", 249, new GregorianCalendar(1953, Calendar.OCTOBER, 19).getTime()));
+        booksByTitle.add(new Book("The Hobbit", "J.R.R. Tolkien", 310, new GregorianCalendar(1937, Calendar.SEPTEMBER, 21).getTime()));
+        booksByTitle.add(new Book("The Odyssey", "Homer", 384, new GregorianCalendar(-800, Calendar.JANUARY, 1).getTime()));
 
         System.out.println("Books sorted by title: ");
         for (Book book: booksByTitle ){
@@ -22,8 +22,6 @@ public class Main {
         for (Book book: booksByPageCount){
             System.out.println(book);
         }
-
-
 
 
     }
