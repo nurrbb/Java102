@@ -23,6 +23,25 @@ public class Main {
             System.out.println(book);
         }
 
+        Set<Book> booksByAuthor = new TreeSet<>(Comparator.comparing(Book::getAuthor));
+        booksByAuthor.addAll(booksByTitle);
+
+        System.out.println("\nBooks sorted by author: ");
+
+        for (Book book: booksByAuthor){
+            System.out.println(book);
+        }
+
+        Set<Book> booksPublicationDate = new TreeSet<>(Comparator.comparing(Book::getPublicationDate));
+        booksPublicationDate.addAll(booksByTitle);
+
+        System.out.println("\nBooks sorted by publication date: ");
+
+        for (Book book:booksPublicationDate){
+            System.out.println(book);
+        }
+
+
 
     }
 }

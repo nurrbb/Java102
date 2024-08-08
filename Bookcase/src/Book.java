@@ -41,8 +41,8 @@ public class Book implements Comparable<Book> {
     @Override
     public String toString() {
         return
-                "Title: " + title + '\'' +
-                ", Author: " + author + '\'' +
+                "Title: " + title +
+                ", Author: " + author  +
                 ", Page Count: " + pageCount +
                 ", Publication Date: " + getFormattedDate();
     }
