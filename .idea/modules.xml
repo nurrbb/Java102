@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Java102.iml" filepath="$PROJECT_DIR$/Java102.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyList/MyList.iml" filepath="$PROJECT_DIR$/MyList/MyList.iml" />
       <module fileurl="file://$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" filepath="$PROJECT_DIR$/MysticChronicles/MysticChronicles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PatikaStore/PatikaStore.iml" filepath="$PROJECT_DIR$/PatikaStore/PatikaStore.iml" />
     </modules>
   </component>
 </project>
