@@ -37,6 +37,8 @@ public class Notebook extends Product {
 
     @Override
     public String toString() {
-        return String.format("RAM: %d GB, Storage: %d GB SSD, Screen: %.1f inches", ram, storage, screenSize);
+        return String.format("ID: %d, Brand: %s, Name: %s, Price: %.1f TL, RAM: %d GB, Storage: %d GB SSD, Screen: %.1f inches",
+                getId(), getBrand().getName(), getName(), getPrice(), ram, storage, screenSize);
     }
+
 }

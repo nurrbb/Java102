@@ -51,7 +51,7 @@ public class Store {
     private void listBrands(){
         System.out.println("Brands\n-----------------------");
         for (Brand brand: brands){
-            System.out.println("-" + brand.getName());
+            System.out.printf("| %-2d | %-10s |\n", brand.getId(), brand.getName());
         }
     }
     private void listPhones() {
@@ -95,28 +95,38 @@ public class Store {
         System.out.println("Notebook removed.");
     }
     private void filterPhonesByBrand(int brandId) {
-        System.out.println("Filtered Phones\n-----------------------");
+        boolean found = false;
         for (Phone phone : phones) {
             if (phone.getBrand().getId() == brandId) {
                 System.out.println(phone);
+                found = true;
             }
+        }
+        if (!found) {
+            System.out.println("No products available under the selected brand.");
         }
     }
 
+
     private void filterNotebooksByBrand(int brandId) {
-        System.out.println("Filtered Notebooks\n-----------------------");
+        boolean found = false;
         for (Notebook notebook : notebooks) {
             if (notebook.getBrand().getId() == brandId) {
                 System.out.println(notebook);
+                found = true;
             }
         }
+        if (!found) {
+            System.out.println("No products available under the selected brand.");
+        }
     }
+
 
     private void  addNotebook(Scanner scanner){
 
         listBrands();
         System.out.println("Enter Brand Id:");
-        int brandId =scanner.nextInt()+1; //kontrol et
+        int brandId =scanner.nextInt();
 
         System.out.println("Product name:");
         scanner.nextLine();
@@ -140,7 +150,7 @@ public class Store {
         System.out.print("Screen Size: ");
         double screenSize = scanner.nextDouble();
 
-        notebooks.add(new Notebook(productIdCounter++,brands.get(brandId),name,price,discountRate,stock,ram,storage,screenSize));
+        notebooks.add(new Notebook(productIdCounter++,brands.get(brandId-1),name,price,discountRate,stock,ram,storage,screenSize));
         System.out.println("Notebook added!");
     }
 
@@ -148,7 +158,7 @@ public class Store {
 
         listBrands();
         System.out.println("Enter Brand Id:");
-        int brandId =scanner.nextInt()+1;
+        int brandId =scanner.nextInt();
 
         System.out.println("Product name:");
         scanner.nextLine();
@@ -179,7 +189,7 @@ public class Store {
         scanner.nextLine();
         String colour =scanner.nextLine();
 
-        phones.add(new Phone(productIdCounter++,brands.get(brandId),name,price,discountRate,stock,memory,screenSize,battery,ram,colour));
+        phones.add(new Phone(productIdCounter++,brands.get(brandId-1),name,price,discountRate,stock,memory,screenSize,battery,ram,colour));
         System.out.println("Phone added!");
     }
     public void notebookMenu(Scanner scanner) {
@@ -198,6 +208,7 @@ public class Store {
                     listNotebooks();
                     break;
                 case 2:
+                    listBrands();
                     System.out.print("Enter Brand Id: ");
                     int notebookBrandId = scanner.nextInt();
                     filterNotebooksByBrand(notebookBrandId);
@@ -206,6 +217,7 @@ public class Store {
                     addNotebook(scanner);
                     break;
                 case 4:
+                    listNotebooks();
                     System.out.print("Enter Notebook ID to remove: ");
                     int notebookId = scanner.nextInt();
                     removeNotebookById(notebookId);
@@ -234,6 +246,7 @@ public class Store {
                     listPhones();
                     break;
                 case 2:
+                    listBrands();
                     System.out.print("Enter Brand Id: ");
                     int phoneBrandId = scanner.nextInt();
                     filterPhonesByBrand(phoneBrandId);
@@ -242,6 +255,7 @@ public class Store {
                     addPhone(scanner);
                     break;
                 case 4:
+                    listPhones();
                     System.out.print("Enter Phone ID to remove: ");
                     int phoneId = scanner.nextInt();
                     removePhoneById(phoneId);
@@ -281,6 +295,4 @@ public class Store {
             }
         }
     }
-
-
 }
